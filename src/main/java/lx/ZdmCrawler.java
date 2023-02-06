@@ -168,6 +168,7 @@ public class ZdmCrawler {
         } catch (IORuntimeException | HttpException | JSONException | TimeoutException |
                  org.openqa.selenium.TimeoutException e) {
             //尝试重新获取cookie并重试接口, 重试次数耗尽则结束任务
+
             if (retry > 0) {
                 //一般是接口调用太频繁跳验证码, 或者什么值得买的服务器重启宕机 等问题会引发重试, 重试的间隔时间会以分钟起步进行赋值
                 int minutes = (MAX_RETRY - retry + 1);
