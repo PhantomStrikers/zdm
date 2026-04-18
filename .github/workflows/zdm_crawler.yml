@@ -28,6 +28,7 @@ jobs:
         uses: browser-actions/setup-chrome@v2
         with:
           chrome-version: 145
+          chromedriver-version: 145
           install-chromedriver: true
       # 将上次运行的缓存文件覆盖到本地
       - name: database cache restore
